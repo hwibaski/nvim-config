@@ -56,6 +56,8 @@ return {
     require 'kickstart.plugins.neo-tree',
 
     require 'kickstart.plugins.auto-save',
+
+    require 'kickstart.plugins.lualine',
     -- require 'kickstart.plugins.lint',
     -- require 'kickstart.plugins.nvim-tree',
 
