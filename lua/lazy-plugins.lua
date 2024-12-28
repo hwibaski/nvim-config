@@ -54,6 +54,8 @@ return {
     require 'kickstart.plugins.yazi',
 
     require 'kickstart.plugins.neo-tree',
+
+    require 'kickstart.plugins.auto-save',
     -- require 'kickstart.plugins.lint',
     -- require 'kickstart.plugins.nvim-tree',
 
