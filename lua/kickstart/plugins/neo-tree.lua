@@ -11,13 +11,16 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>e', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
     filesystem = {
+      visible = true, -- 숨김 파일 보이도록 설정
+      -- hide_dotfiles = false, -- 점(.)으로 시작하는 파일 숨기지 않음
+      -- hide_gitignored = false, -- .gitignore에 포함된 파일 숨기지 않음
       window = {
         mappings = {
-          ['\\'] = 'close_window',
+          ['<leader>e'] = 'close_window',
         },
       },
     },
