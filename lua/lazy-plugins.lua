@@ -58,6 +58,8 @@ return {
     require 'kickstart.plugins.auto-save',
 
     require 'kickstart.plugins.lualine',
+
+    require 'kickstart.plugins.git-blame',
     -- require 'kickstart.plugins.lint',
     -- require 'kickstart.plugins.nvim-tree',
 
