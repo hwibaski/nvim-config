@@ -51,8 +51,6 @@ return {
 
     require 'kickstart.plugins.autopairs',
 
-    require 'kickstart.plugins.yazi',
-
     require 'kickstart.plugins.neo-tree',
 
     require 'kickstart.plugins.auto-save',
