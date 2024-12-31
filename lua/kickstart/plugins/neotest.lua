@@ -48,7 +48,12 @@ return {
     config = function()
       require('neotest').setup {
         adapters = {
-          require 'neotest-jest', -- jest 어댑터 등록
+          require 'neotest-jest' {
+            jestCommand = 'yarn test',
+            discovery = {
+              enabled = false,
+            },
+          },
         },
       }
     end,
