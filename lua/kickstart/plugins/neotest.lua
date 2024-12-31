@@ -48,12 +48,7 @@ return {
     config = function()
       require('neotest').setup {
         adapters = {
-          require 'neotest-jest' {
-            jestCommand = 'yarn test',
-            discovery = {
-              enabled = false,
-            },
-          },
+          require 'neotest-jest',
         },
       }
     end,
