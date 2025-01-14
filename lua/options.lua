@@ -68,3 +68,12 @@ vim.opt.laststatus = 3
 -- optionally enable 24-bit colour
 -- nvim-tree 설정
 vim.opt.termguicolors = true
+
+-- 파일에 실제로 저장된 탭 문자(\t)를 화면에서 몇 칸으로 보일지 지정합니다.
+vim.opt.tabstop = 4
+
+-- 자동 들여쓰기 시 몇 칸을 들여쓰기할지 지정합니다.
+vim.opt.shiftwidth = 4
+
+-- 파일에 저장될 때 탭 문자를 공백 문자로 변환할지 여부를 지정합니다.
+vim.opt.expandtab = false
