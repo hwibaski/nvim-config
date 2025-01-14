@@ -33,7 +33,7 @@ return {
 
     require 'kickstart.plugins.cmp',
 
-    require 'kickstart.plugins.tokyonight',
+    require 'kickstart.theme.vscode',
 
     require 'kickstart.plugins.todo-comments',
 
