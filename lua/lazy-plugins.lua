@@ -65,6 +65,8 @@ return {
 
     require 'kickstart.plugins.outline',
 
+    require 'kickstart.plugins.nvim-scrollbar',
+
     -- require 'kickstart.plugins.lint',
     -- require 'kickstart.plugins.nvim-tree',
     -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
