@@ -115,13 +115,10 @@ return {
           --
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
           local client = vim.lsp.get_client_by_id(event.data.client_id)
-          -- ts_ls 일 때만 실행
-          if client and client.name == 'ts_ls' then
+          -- vtsls 일 때만 실행
+          if client and client.name == 'vtsls' then
             map('<leader>oi', function()
-              vim.lsp.buf.execute_command {
-                command = '_typescript.organizeImports',
-                arguments = { vim.api.nvim_buf_get_name(0) },
-              }
+              vim.lsp.buf.execute_command { command = 'typescript.organizeImports', arguments = { vim.api.nvim_buf_get_name(0) } }
             end, '[O]rganize [I]mports')
           end
 
@@ -197,7 +194,7 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        ts_ls = {
+        vtsls = {
           settings = {
             typescript = {
               updateImportsOnFileMove = { enabled = 'always' },
@@ -206,17 +203,17 @@ return {
               },
             },
           },
-          commands = {
-            OrganizeImports = {
-              function()
-                vim.lsp.buf.execute_command {
-                  command = '_typescript.organizeImports',
-                  arguments = { vim.api.nvim_buf_get_name(0) },
-                }
-              end,
-              description = 'Organize Imports',
-            },
-          },
+          -- commads = {
+          --   OrganizeImports = {
+          --     function()
+          --       vim.lsp.buf.execute_command {
+          --         command = '_typescript.organizeImports',
+          --         arguments = { vim.api.nvim.nvim_buf_get_name(0) },
+          --       }
+          --     end,
+          --     description = 'Organize Imports',
+          --   },
+          -- },
         },
         lua_ls = {
           -- cmd = { ... },
@@ -232,6 +229,8 @@ return {
             },
           },
         },
+        zls = {},
+        clangd = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -250,6 +249,8 @@ return {
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
       require('mason-lspconfig').setup {
+        ensure_installed = servers,
+        automatic_installation = true,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
