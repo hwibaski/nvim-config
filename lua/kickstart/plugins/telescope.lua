@@ -86,6 +86,7 @@ return {
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>sm', builtin.marks, { desc = '**[S]earch [M]arks' })
       vim.keymap.set('n', '<leader>sj', builtin.jumplist, { desc = '**[S]earch [J]umplist' })
+      vim.keymap.set('n', '<leader>se', builtin.git_status, { desc = '**[S]earch [E]dited' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
