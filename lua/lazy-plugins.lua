@@ -68,6 +68,8 @@ return {
     require 'kickstart.plugins.nvim-scrollbar',
 
     require 'kickstart.plugins.bookmarks',
+
+    require 'kickstart.plugins.neocodeuim',
     -- require 'kickstart.plugins.lint',
     -- require 'kickstart.plugins.nvim-tree',
     -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
