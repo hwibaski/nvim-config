@@ -231,6 +231,7 @@ return {
         },
         zls = {},
         clangd = {},
+        prismals = {},
       }
 
       -- Ensure the servers and tools above are installed
